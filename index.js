@@ -1,8 +1,3 @@
-// onclick?
-// keydown?
-// change?
-// focus?
-
 function idCheckFunction(){
     //length
     if(inputID.value.length >4 && inputID.value.length <16){
