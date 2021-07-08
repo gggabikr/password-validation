@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input class="input input__id" type="text" placeholder="ID" required />
+      <ul class="id-checker noshow">
+        <li class="id-length nopassChecker">
+          <i class="far fa-times-circle"></i>ID must be longer than 4 characters
+          and less than 16 characters
+        </li>
+        <li class="id-number nopassChecker">
+          <i class="far fa-times-circle"></i>ID must contain at least one number
+        </li>
+        <li class="id-special nopassChecker">
+          <i class="far fa-times-circle"></i>ID cannot contain special
+          characters
+        </li>
+        <!-- <li class="id-already nopassChecker">
+          <i class="far fa-times-circle"></i>ID already in use
+        </li> -->
+      </ul>
+      <input
+        class="input input__pw"
+        type="password"
+        placeholder="password"
+        required
+      />
+      <ul class="pw-checker noshow">
+        <li class="pw-length nopassChecker">
+          <i class="far fa-times-circle"></i>Password must be longer than 8
+          characters
+        </li>
+        <li class="pw-number nopassChecker">
+          <i class="far fa-times-circle"></i>Password must contain at least one
+          number
+        </li>
+        <li class="pw-case nopassChecker">
+          <i class="far fa-times-circle"></i>Password must contain at least one
+          uppercase and lowercase letter
+        </li>
+        <li class="pw-special nopassChecker">
+          <i class="far fa-times-circle"></i>Password must contain at least one
+          special characters
+        </li>
+        <li class="pw-sameasid nopassChecker">
+          <i class="far fa-times-circle"></i>Password cannot be same as ID
+        </li>
+      </ul>
+      <input type="submit" value="sign up" />
+    </form>
+    <!-- <div>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+        </ul>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+        </ul>
+    </div> -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

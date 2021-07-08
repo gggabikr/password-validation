@@ -1,0 +1,42 @@
+body {
+  margin-top: 200px;
+  display: flex;
+  margin-left: 200px;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.passChecker {
+  color: rgb(0, 112, 0);
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.nopassChecker {
+  color: rgb(110, 0, 0);
+  background-color: rgba(248, 66, 66, 0.329);
+}
+
+.noshow {
+  display: none;
+}
+
+.id-checker {
+  position: fixed;
+  top: 220px;
+  left: 170px;
+}
+
+.pw-checker {
+  position: fixed;
+  top: 355px;
+  left: 170px;
+}
