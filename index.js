@@ -25,11 +25,10 @@ function idCheckFunction(){
         idNumber.firstElementChild.classList.add('fa-times-circle')
         idNumber.firstElementChild.classList.remove('fa-check-circle')
     }
-    // [!@#$%^&*./,<>-_+=]
-  
     //special - failed
-    const specials = /^[!@#$%^&*.,]$/g;
-    if(!inputID.value.match(specials)){
+    const specials = /[!@#$%^&*.,<>-_+=]/
+    if(inputID.value.match(specials)){
+    // if (!/^[A-Za-z0-9]*$/.test(inputID.value)) {
         idSpecial.classList.add('passChecker')
         idSpecial.classList.remove('nopassChecker')
         idSpecial.firstElementChild.classList.remove('fa-times-circle')
@@ -73,7 +72,7 @@ function pwCheckFunction(){
     //case
     const lowercases = /[a-z]/g;
     const uppercases = /[A-Z]/g;
-    if(inputPW.value.match(uppercases)){
+    if(inputPW.value.match(uppercases)&&inputPW.value.match(lowercases)){
         pwCase.classList.add('passChecker')
         pwCase.classList.remove('nopassChecker')
         pwCase.firstElementChild.classList.remove('fa-times-circle')
@@ -86,7 +85,7 @@ function pwCheckFunction(){
     }
   
     //special - failed
-    const specials = /^[!@#$%^&*.,]$/g;    // [!@#$%^&*./,<>-_+=]
+    const specials = /[!@#$%_^&*.,/<>-]/;
     if(inputPW.value.match(specials)){
         pwSpecial.classList.add('passChecker')
         pwSpecial.classList.remove('nopassChecker')
