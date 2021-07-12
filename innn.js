@@ -1,14 +1,22 @@
-const specials = /^[A-Za-z0-9]*$/;
-
-
-if(!'aa123!!'.match(/^[A-Za-z0-9]*$/)){
-    console.log('aaaa')
+function unpackGiftbox(giftBox, wish) {
+  if (giftBox.length===0){
+  return false;
   }
 
-if (!/^[A-Za-z0-9]*$/.test('aa123!!')) {
-    console.log('bbbb')
+  for(i=0; i<giftBox.length; i++){
+    if(wish===giftBox[i]){
+      console.log(wish)
+      console.log(giftBox[i])
+      return true;
+    }
+    else if (Array.isArray(giftBox[i])){
+      return unpackGiftbox(giftBox[i],wish)
+    }
   }
+  return false
+}
 
-if (/[!@#$%^&*./,<>-_+=]/.test('aaAA123')) {
-    console.log('dddd')
-  }
+console.log(unpackGiftbox([1,2,[3,4]]))
+
+
+console.log()
