@@ -1,22 +1,14 @@
-function unpackGiftbox(giftBox, wish) {
-  if (giftBox.length===0){
-  return false;
-  }
-
-  for(i=0; i<giftBox.length; i++){
-    if(wish===giftBox[i]){
-      console.log(wish)
-      console.log(giftBox[i])
-      return true;
+function flattenArr(arr) {
+  let result = [];
+  arr.map(function(el){
+    if (Array.isArray(el)) {
+      result = result.concat(flattenArr(el))
     }
-    else if (Array.isArray(giftBox[i])){
-      return unpackGiftbox(giftBox[i],wish)
+    else {
+      result.push(el)
     }
-  }
-  return false
+  })
+  return result;
 }
-
-console.log(unpackGiftbox([1,2,[3,4]]))
-
-
-console.log()
+let output = flattenArr([[2,[[3]]],4,[[5]]]);
+console.log(output);
