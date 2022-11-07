@@ -25,9 +25,9 @@ function idCheckFunction(){
         idNumber.firstElementChild.classList.add('fa-times-circle')
         idNumber.firstElementChild.classList.remove('fa-check-circle')
     }
-    //special - failed
+    //special
     const specials = /[!@#$%^&*.,<>-_+=]/
-    if(inputID.value.match(specials)){
+    if(!inputID.value.match(specials)){
     // if (!/^[A-Za-z0-9]*$/.test(inputID.value)) {
         idSpecial.classList.add('passChecker')
         idSpecial.classList.remove('nopassChecker')
@@ -84,7 +84,7 @@ function pwCheckFunction(){
         pwCase.firstElementChild.classList.remove('fa-check-circle')
     }
   
-    //special - failed
+    //special
     const specials = /[!@#$%_^&*.,/<>-]/;
     if(inputPW.value.match(specials)){
         pwSpecial.classList.add('passChecker')
@@ -98,8 +98,8 @@ function pwCheckFunction(){
         pwSpecial.firstElementChild.classList.remove('fa-check-circle')
     }
 
-    //same as id
-    if(inputPW.value !==inputID.value){
+    //include the username
+    if(!inputPW.value.includes(inputID.value)){
         pwSameasid.classList.add('passChecker')
         pwSameasid.classList.remove('nopassChecker')
         pwSameasid.firstElementChild.classList.remove('fa-times-circle')
